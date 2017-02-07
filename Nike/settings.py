@@ -65,9 +65,14 @@ DOWNLOAD_DELAY = 3
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'Nike.pipelines.SomePipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'Nike.pipelines.NikePipeline': 300,
+}
+
+MONGODB_SERVER = "localhost"
+MONGODB_PORT = 27017
+DB_PATH = "/home/soban/brainx/picket/picket_api/db/development.sqlite3"
+DB_COLLECTION = "scraped_products"
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
